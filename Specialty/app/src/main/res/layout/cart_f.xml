@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.specialty.administrator.cart.Cart_F">
+    <!-- 头部按钮开始 -->
+    <include
+        android:id="@+id/cart_top"
+        layout="@layout/top_menu_all"/>
+    <!--头部按钮结束，空购物车界面开始-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/cart_top"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@mipmap/cart_null"
+            android:gravity="center"
+            android:text="@string/cart_null"
+            android:textSize="@dimen/text_size_x"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/cart_buy"/>
+    </LinearLayout>
+    <!--空购物车界面结束，订单开始-->
+    <RelativeLayout
+        android:id="@+id/shuw_cart_view"
+        android:layout_below="@id/cart_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Specialty</string>
+    <string name="tv_home">首页</string>
+    <string name="tv_classify">分类</string>
+    <string name="tv_cart">购物车</string>
+    <string name="tv_me">我的</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">fragment1</string>
+    <string name="hello_blank_fragment1">fragment2</string>
+    <string name="hello_blank_fragment2">fragment3</string>
+    <string name="hello_blank_fragment3">fragment4</string>
+
+    <!--分类界面-->
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <!--首页-->
+    <string name="Search">搜索</string>
+    <string name="refrech">消息</string>
+    <string name="home_center_charge">干货</string>
+    <string name="home_bottom_transaction">生鲜</string>
+    <string name="home_center"> 资讯 </string>
+    <string name="home_center_customerService"> 分类</string>
+    <string name="home_hot">热卖商品</string>
+    <string name="img">图片</string>
+    <string name="home_new">最新上架</string>
+    <!--购物车界面-->
+    <string name="cart_top">购物车</string>
+    <string name="cart_null">愿望满满，但是车还是空的！</string>
+    <string name="cart_buy">再不去抢购，宝贝就要卖光啦～</string>
+</resources>
