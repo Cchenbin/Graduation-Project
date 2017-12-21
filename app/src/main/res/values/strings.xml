@@ -30,4 +30,9 @@
     <string name="cart_top">购物车</string>
     <string name="cart_null">愿望满满，但是车还是空的！</string>
     <string name="cart_buy">再不去抢购，宝贝就要卖光啦～</string>
+    <string name="cart_specification">口味：</string>
+    <string name="cart_num">数量：</string>
+    <string name="cart_plus">+</string>
+    <string name="cart_Less">-</string>
+    <string name="cart_money">¥</string>
 </resources>

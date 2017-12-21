@@ -11,9 +11,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_centerInParent="true"
         android:layout_below="@id/cart_top"
+        android:layout_centerInParent="true"
+        android:gravity="center"
         android:orientation="vertical"
         android:visibility="invisible">
 
@@ -25,6 +25,7 @@
             android:gravity="center"
             android:text="@string/cart_null"
             android:textSize="@dimen/text_size_x"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,9 +35,15 @@
     <!--空购物车界面结束，订单开始-->
     <RelativeLayout
         android:id="@+id/shuw_cart_view"
-        android:layout_below="@id/cart_top"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/cart_top">
+
+        <ListView
+            android:id="@+id/cart_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
     </RelativeLayout>
 
 
