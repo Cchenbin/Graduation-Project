@@ -35,4 +35,48 @@
     <string name="cart_plus">+</string>
     <string name="cart_Less">-</string>
     <string name="cart_money">¥</string>
+    <!--用户界面-->
+    <string name="user_phone">158****7192</string>
+    <string name="user_name">陈彬</string>
+    <string name="user_collectionNum">100</string>
+    <string name="user_collection">我的收藏</string>
+    <string name="user_order">我的订单</string>
+    <string name="user_address">收货地址</string>
+    <string name="user_problem">问题反馈</string>
+    <string name="user_okOrder">查看所有已购买商品</string>
+    <string name="user_pendingPayment">待付款</string>
+    <string name="user_delivered">待发货</string>
+    <string name="user_received">待收货</string>
+    <string name="user_evaluated">待评价</string>
+    <string name="user_about">关于</string>
+    <string name="user_sever">顾客服务</string>
+    <string name="user_help">帮助中心</string>
+    <string name="user_link">友情链接</string>
+    <string name="user_coupon">优惠券</string>
+    <!--收货地址-->
+    <string name="address_top">管理收货地址</string>
+    <string name="address_no">暂无收货地址～</string>
+    <string name="address_add">添加新地址</string>
+    <string name="address_save">保存</string>
+    <string name="address_receiver">收货人</string>
+    <string name="address_phone">联系电话</string>
+    <string name="address_address">详细地址</string>
+    <string name="address_default">设为默认地址</string>
+    <string name="address_receiver_list">收货人：</string>
+    <string name="address_phone_list">15892057194</string>
+    <string name="address_address_list">深圳市南山区科技园南区R2-B三楼</string>
+    <string name="address_edit_list">编辑</string>
+    <string name="address_delete_list">删除</string>
+    <!--个人中心-->
+    <string name="center_avatar">用户头像</string>
+    <string name="center_nickname">昵称</string>
+    <string name="center_name">夜未央</string>
+    <string name="center_Bind_phone">绑定手机</string>
+    <string name="center_change_passward">修改密码</string>
+    <string name="title_activity_login">login</string>
+    <!--登录界面-->
+    <string name="log_account">请输入手机号</string>
+    <string name="log_pwd">请输入手机号</string>
+    <string name="log_log">登录</string>
+    <string name="logistics_top">物流信息</string>
 </resources>

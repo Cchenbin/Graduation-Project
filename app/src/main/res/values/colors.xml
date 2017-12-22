@@ -10,6 +10,9 @@
     <color name="colorRed">#FF0000</color>
     <color name="colorblack">#000000</color>
     <color name="colorpink">#FF2150</color>
+    <color name="coloryellow">#FCE3B2</color>
+    <color name="colorGray">#F1F1F1</color>
     <!-- 透明度 -->
     <color name="background_transport">#80000000</color>
+
 </resources>
