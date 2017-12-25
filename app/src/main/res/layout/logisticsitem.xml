@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:baselineAligned="false"
+              android:orientation="horizontal">
+
+    <!-- 左边 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!-- 上面的竖线 -->
+        <View
+            android:id="@+id/v_top_line"
+            android:layout_width="2dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-1dp"
+            android:background="@color/colorlogisicsLine"/>
+
+        <!-- 圆点 -->
+        <ImageView
+            android:id="@+id/iv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/circle"
+            android:contentDescription="@string/img"/>
+
+        <!-- 竖线 -->
+        <View
+            android:id="@+id/v_down_line"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorlogisicsLine"/>
+    </LinearLayout>
+
+    <!-- 右边 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="17dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_express_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/logis_trace_info"
+            android:textColor="@color/colorlogisicsText"
+            android:textIsSelectable="true"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_express_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp"
+            android:text="@string/ligis_time"
+            android:textColor="@color/colorlogisicsLine"
+            android:textIsSelectable="true"
+            android:textSize="12sp"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

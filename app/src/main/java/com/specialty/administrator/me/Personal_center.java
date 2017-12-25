@@ -12,10 +12,10 @@ import com.specialty.administrator.specialty.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Address_F extends Fragment {
+public class Personal_center extends Fragment {
 
 
-    public Address_F() {
+    public Personal_center() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class Address_F extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.address_f, container, false);
+        return inflater.inflate(R.layout.personal_center, container, false);
     }
 
 }

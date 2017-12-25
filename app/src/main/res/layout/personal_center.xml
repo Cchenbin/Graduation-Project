@@ -3,7 +3,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/colorGray"
-                tools:context="com.specialty.administrator.me.Personal_center_f">
+                tools:context="com.specialty.administrator.me.Personal_center">
 
     <include
         android:id="@+id/presonal_center"

@@ -79,4 +79,8 @@
     <string name="log_pwd">请输入手机号</string>
     <string name="log_log">登录</string>
     <string name="logistics_top">物流信息</string>
+    <!--查看物流-->
+    <string name="logis_trace_info">已发货</string>
+    <string name="ligis_time">2016年4月27日 00:27:45</string>
+    <string name="title_activity_logistivsitem">Logistivsitem</string>
 </resources>

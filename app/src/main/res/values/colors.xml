@@ -12,6 +12,8 @@
     <color name="colorpink">#FF2150</color>
     <color name="coloryellow">#FCE3B2</color>
     <color name="colorGray">#F1F1F1</color>
+    <color name="colorlogisicsLine">#D3D3D3</color>
+    <color name="colorlogisicsText">#999999</color>
     <!-- 透明度 -->
     <color name="background_transport">#80000000</color>
 
