@@ -35,6 +35,9 @@
     <string name="cart_plus">+</string>
     <string name="cart_Less">-</string>
     <string name="cart_money">¥</string>
+    <string name="cart_all">全选</string>
+    <string name="cart_all_money">合计：￥0.0</string>
+    <string name="cart_by_all">结算(0)</string>
     <!--用户界面-->
     <string name="user_phone">158****7192</string>
     <string name="user_name">陈彬</string>
@@ -81,6 +84,6 @@
     <string name="logistics_top">物流信息</string>
     <!--查看物流-->
     <string name="logis_trace_info">已发货</string>
-    <string name="ligis_time">2016年4月27日 00:27:45</string>
+    <string name="ligis_time">4-27 12:27</string>
     <string name="title_activity_logistivsitem">Logistivsitem</string>
 </resources>

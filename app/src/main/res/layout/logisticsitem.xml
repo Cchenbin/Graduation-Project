@@ -9,9 +9,24 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/tv_express_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:paddingBottom="10dp"
+            android:text="@string/ligis_time"
+            android:textColor="@color/colorlogisicsLine"
+            android:textIsSelectable="true"
+            android:textSize="12sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
         android:layout_weight="0.1"
         android:gravity="center"
         android:orientation="vertical">
@@ -46,7 +61,6 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="17dp"
         android:layout_weight="1"
@@ -63,18 +77,14 @@
             android:textSize="16sp"/>
 
         <TextView
-            android:id="@+id/tv_express_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             android:layout_marginTop="5dp"
             android:paddingBottom="10dp"
             android:text="@string/ligis_time"
             android:textColor="@color/colorlogisicsLine"
             android:textIsSelectable="true"
             android:textSize="12sp"/>
-
-
     </LinearLayout>
-
-
 </LinearLayout>

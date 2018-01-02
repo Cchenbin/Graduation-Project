@@ -1,6 +1,7 @@
 package com.specialty.administrator.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +56,7 @@ public class TraceAdapter  extends BaseAdapter{
             holder.tv_express_text=view.findViewById(R.id.tv_express_text);
             holder.tv_express_time=view.findViewById(R.id.tv_express_time);
             holder.v_down_line=view.findViewById(R.id.v_down_line);
-            view.setTag(holder);
+             view.setTag(holder);
         }else {
             holder=(Holder)view.getTag();
         }
@@ -63,7 +64,9 @@ public class TraceAdapter  extends BaseAdapter{
             holder.v_top_line.setVisibility(View.INVISIBLE);
             holder.iv_state.setImageResource(R.mipmap.circlered);
             holder.tv_express_text.setText(traceArrayList.get(position).getInfo());
+            holder.tv_express_text.setTextColor(Color.parseColor("#FF2150"));
             holder.tv_express_time.setText(traceArrayList.get(position).getTime());
+            holder.tv_express_time.setTextColor(Color.parseColor("#FF2150"));
             holder.v_down_line.setVisibility(View.VISIBLE);
         }else if (traceArrayList.size()==(position+1)){
             holder.v_top_line.setVisibility(View.VISIBLE);

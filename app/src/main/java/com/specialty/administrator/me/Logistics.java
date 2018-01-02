@@ -30,14 +30,13 @@ public class Logistics extends Activity {
     }
 
     private void initData() {
-
-        tradeLists.add(new Trace(true, "货物正在配送", "", "2016-03-16 18:30:43"));
-        tradeLists.add(new Trace(false, "货物已到达天津转运中心", "", "2016-03-17 13:30:43"));
-        tradeLists.add(new Trace(false, "货品已到济南货运站", "", "2016-03-18 13:30:43"));
-        tradeLists.add(new Trace(false, "货物已送达济南高新区站点", "", "2016-03-19 13:30:43"));
-        tradeLists.add(new Trace(false, "货物已送达济南高新区站点", "", "2016-03-19 13:30:43"));
-        tradeLists.add(new Trace(false, "货物已送达济南高新区", "", "2016-03-19 13:30:43"));
-        tradeLists.add(new Trace(false, "商家已发货","", "2016-03-16 13:30:43"));
+        tradeLists.add(new Trace(true, "货物正在配送", "", "03-19 18:30"));
+        tradeLists.add(new Trace(false, "货物已到达天津转运中心", "", "03-18 13:30"));
+        tradeLists.add(new Trace(false, "货品已到济南货运站", "", "03-17 13:30"));
+        tradeLists.add(new Trace(false, "货物已送达济南高新区站点", "", "03-16 13:30"));
+        tradeLists.add(new Trace(false, "货物已送达济南高新区站点", "", "03-16 13:30"));
+        tradeLists.add(new Trace(false, "货物已送达济南高新区", "", "03-15 13:30"));
+        tradeLists.add(new Trace(false, "商家已发货","", "03-14 13:30"));
     }
 
 }

@@ -2,11 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:descendantFocusability="blocksDescendants"
               android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="80dp"
         android:layout_marginTop="10dp"
         android:baselineAligned="true">
 
@@ -19,21 +20,18 @@
 
             <CheckBox
                 android:id="@+id/cart_choose"
-                style="@style/CustomCheckboxTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                android:clickable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
+                android:background="@drawable/checkboxun"
+                android:button="@null"
                 android:gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="0.8">
 
             <ImageView
                 android:id="@+id/cart_img"
@@ -51,21 +49,56 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/cart_name"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxEms="8"
-                    android:maxLines="1"
-                    android:text="@string/cart_null"
-                    android:textColor="@color/colorblack"
-                    android:textSize="@dimen/text_size_m"/>
+                    android:layout_weight=" 2">
+
+                    <TextView
+                        android:id="@+id/cart_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxEms="6"
+                        android:maxLines="1"
+                        android:text="@string/cart_null"
+                        android:textColor="@color/colorblack"
+                        android:textSize="@dimen/text_size_m"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.2"
+                        android:text="@string/cart_money"
+                        android:textColor="@color/colorpink"
+                        android:textSize="@dimen/text_size_m"/>
+
+                    <TextView
+                        android:id="@+id/cart_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/cart_money"
+                        android:textColor="@color/colorpink"
+                        android:textSize="@dimen/text_size_m"/>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -90,96 +123,89 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:baselineAligned="false"
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:text="@string/cart_num"
-                    android:textSize="@dimen/text_size_m"/>
-
-                <Button
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:background="@drawable/cart_button_left"
-                    android:text="@string/cart_Less"/>
-
-                <EditText
-                    android:id="@+id/cart_num"
-                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@drawable/cart_edit"
-                    android:inputType="number"
-                    android:textColor="@color/colorblack"
-                    android:textSize="@dimen/text_size_m"/>
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/cart_num"
+                        android:textSize="@dimen/text_size_m"/>
+                </LinearLayout>
 
-                <Button
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:background="@drawable/cart_button_right"
-                    android:text="@string/cart_plus"
-                    android:textColor="@color/colorpink"/>
+                    android:layout_weight="0.4">
+
+                    <Button
+                        android:id="@+id/cart_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cart_button_left"
+                        android:text="@string/cart_Less"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8">
+
+                    <EditText
+                        android:id="@+id/cart_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/cart_edit"
+                        android:hint=""
+                        android:inputType="number"
+                        android:gravity="center"
+                        android:textColor="@color/colorblack"
+                        android:textSize="@dimen/text_size_m"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4">
+
+                    <Button
+                        android:id="@+id/cart_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cart_button_right"
+                        android:text="@string/cart_plus"
+                        android:textColor="@color/colorpink"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center">
+                    <ImageView
+                        android:id="@+id/cart_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/img"
+                        android:src="@mipmap/delete"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginStart="5dp"
-                    android:text="@string/cart_money"
-                    android:textColor="@color/colorpink"
-                    android:textSize="@dimen/text_size_m"/>
-
-                <TextView
-                    android:id="@+id/cart_money"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginStart="5dp"
-                    android:text="@string/cart_money"
-                    android:textColor="@color/colorpink"
-                    android:textSize="@dimen/text_size_m"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:gravity="bottom"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/cart_delete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="7dp"
-                    android:layout_marginStart="7dp"
-                    android:src="@mipmap/delete"/>
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
+
+
+
