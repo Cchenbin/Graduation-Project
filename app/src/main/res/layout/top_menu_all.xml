@@ -6,7 +6,7 @@
         android:id="@+id/cart_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorpink">
+        android:background="@color/colorPink">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

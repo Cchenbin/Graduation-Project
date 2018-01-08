@@ -21,7 +21,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/coloryellow"
+                android:background="@color/colorYellow"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
@@ -290,7 +290,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="5dp"
                 android:background="@color/colorGray"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -312,7 +312,7 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="5dp"
                 android:background="@color/colorGray"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -334,7 +334,7 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="5dp"
                 android:background="@color/colorGray"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -356,7 +356,7 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="5dp"
                 android:background="@color/colorGray"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -378,7 +378,7 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="5dp"
                 android:background="@color/colorGray"/>
         </LinearLayout>
     </ScrollView>

@@ -19,7 +19,7 @@
             android:layout_marginStart="20dp"
             android:paddingBottom="10dp"
             android:text="@string/ligis_time"
-            android:textColor="@color/colorlogisicsLine"
+            android:textColor="@color/colorLogisicsLine"
             android:textIsSelectable="true"
             android:textSize="12sp"/>
     </LinearLayout>
@@ -37,7 +37,7 @@
             android:layout_height="20dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="-1dp"
-            android:background="@color/colorlogisicsLine"/>
+            android:background="@color/colorLogisicsLine"/>
 
         <!-- 圆点 -->
         <ImageView
@@ -54,7 +54,7 @@
             android:layout_width="2dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:background="@color/colorlogisicsLine"/>
+            android:background="@color/colorLogisicsLine"/>
     </LinearLayout>
 
     <!-- 右边 -->
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:lineSpacingExtra="2dp"
             android:text="@string/logis_trace_info"
-            android:textColor="@color/colorlogisicsText"
+            android:textColor="@color/colorLogisicsText"
             android:textIsSelectable="true"
             android:textSize="16sp"/>
 
@@ -83,7 +83,7 @@
             android:layout_marginTop="5dp"
             android:paddingBottom="10dp"
             android:text="@string/ligis_time"
-            android:textColor="@color/colorlogisicsLine"
+            android:textColor="@color/colorLogisicsLine"
             android:textIsSelectable="true"
             android:textSize="12sp"/>
     </LinearLayout>

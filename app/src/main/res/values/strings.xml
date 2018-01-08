@@ -12,10 +12,6 @@
     <string name="hello_blank_fragment1">fragment2</string>
     <string name="hello_blank_fragment2">fragment3</string>
     <string name="hello_blank_fragment3">fragment4</string>
-
-    <!--分类界面-->
-    <string name="drawer_open">打开</string>
-    <string name="drawer_close">关闭</string>
     <!--首页-->
     <string name="Search">搜索</string>
     <string name="refrech">消息</string>
@@ -26,6 +22,7 @@
     <string name="home_hot">热卖商品</string>
     <string name="img">图片</string>
     <string name="home_new">最新上架</string>
+    <string name="home_defaule_announce">测试公告</string>
     <!--购物车界面-->
     <string name="cart_top">购物车</string>
     <string name="cart_null">愿望满满，但是车还是空的！</string>
@@ -56,6 +53,36 @@
     <string name="user_help">帮助中心</string>
     <string name="user_link">友情链接</string>
     <string name="user_coupon">优惠券</string>
+    <!--分类界面-->
+    <string name="classify_name">干果</string>
+    <string name="classify_peanut">花生</string>
+    <string name="classify_potatoes">地瓜</string>
+    <string name="classify_meat">猪肉干</string>
+    <string name="classify_Shoots">笋干</string>
+    <string name="classify_tofu">豆腐干</string>
+    <string name="classify_Comprehensive">综合排序</string>
+    <string name="classify_sales">销量优先</string>
+    <string name="classify_new">最新上架</string>
+    <string name="classify_price">价格</string>
+    <!--详情界面-->
+    <string name="details_name">新疆库尔勒香梨梨子香妃梨</string>
+    <string name="details_money">¥ 29.9</string>
+    <string name="details_taste">请选择规格</string>
+    <string name="details_add_cart">加入购物车</string>
+    <string name="details_collection">收藏</string>
+    <string name="details_buy">立即购买</string>
+    <string name="details_details">商品详情</string>
+    <string name="details_specification">产品规格</string>
+    <string name="details_evaluation">评价</string>
+    <string name="details_product">"    "莱阳梨皮呈黄绿色， 粗糙而有褐色锈斑，果形头粗尾细，萼部凹入，表面上并不美观，但去皮后擎着粗硬的果梗，宛如一支乳白色的雪糕，其肉质细嫩，汁水丰富，甘甜如饴，口感清脆香甜，有独特的风味，是梨中的上品。
+    莱阳梨皮呈黄绿色， 粗糙而有褐色锈斑，果形头粗尾细，萼部凹入，表面上并不美观，但去皮后擎着粗硬的果梗，宛如一支乳白色的雪糕，其肉质细嫩，汁水丰富，甘甜如饴，口感清脆香甜，有独特的风味，是梨中的上品。
+    莱阳梨皮呈黄绿色， 粗糙而有褐色锈斑，果形头粗尾细，萼部凹入，表面上并不美观，但去皮后擎着粗硬的果梗，宛如一支乳白色的雪糕，其肉质细嫩，汁水丰富，甘甜如饴，口感清脆香甜，有独特的风味，是梨中的上品。</string>
+    <string name="details_ingredients">配料表</string>
+    <string name="details_storage">存储方法</string>
+    <string name="details_shelf">保质期</string>
+    <string name="details_packing">包装方式</string>
+    <string name="details_specifica">规格</string>
+    <string name="details_weight">重量(g)</string>
     <!--收货地址-->
     <string name="address_top">管理收货地址</string>
     <string name="address_no">暂无收货地址～</string>
@@ -86,4 +113,7 @@
     <string name="logis_trace_info">已发货</string>
     <string name="ligis_time">4-27 12:27</string>
     <string name="title_activity_logistivsitem">Logistivsitem</string>
+    <string name="title_activity_classification">Classification</string>
+    <string name="title_activity_product_details">product_details</string>
+
 </resources>

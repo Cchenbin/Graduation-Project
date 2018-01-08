@@ -10,7 +10,7 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.specialty.administrator.adapter.cartAdapter;
+import com.specialty.administrator.adapter.CartAdapter;
 import com.specialty.administrator.beans.Cart;
 import com.specialty.administrator.specialty.R;
 
@@ -20,9 +20,9 @@ import java.util.ArrayList;
 public class Cart_F extends Fragment implements View.OnClickListener {
     private ListView cart_list;
     private TextView cart_all, tv_cart_buy_or_del;
-    private ArrayList<Cart> cartArrayList = new ArrayList<Cart>();
+    private ArrayList<Cart> cartArrayList = new ArrayList<>();
     //private List list = new ArrayList();
-    private cartAdapter ca;
+    private CartAdapter ca;
     private Context context;
     private CheckBox check, allcheck;
     private View rootView;
@@ -41,7 +41,7 @@ public class Cart_F extends Fragment implements View.OnClickListener {
         context = this.getActivity();
         rootView = inflater.inflate(R.layout.cart_f, container, false);
         initView();
-        ca = new cartAdapter(cartArrayList, context);
+        ca = new CartAdapter(cartArrayList, context);
         cart_list.setAdapter(ca);
         ca.setOnSubNum(this);
         ca.setOnAddNum(this);
@@ -63,10 +63,11 @@ public class Cart_F extends Fragment implements View.OnClickListener {
     }
 
     private void initData() {
-        cartArrayList.add(new Cart("1", "11111111111111", "22222222222", "3333", 1, 1,0));
-        cartArrayList.add(new Cart("2", "11111111111111", "222222222222222222222", "3333", 1, 2,0));
-        cartArrayList.add(new Cart("3", "11111111111111", "22222222222", "3333", 1, 3,0));
-        cartArrayList.add(new Cart("4", "11111111111111", "222222222222222222222", "3333", 1, 4,0));
+        cartArrayList.add(new Cart("1", R.mipmap.peanut, "22222222222", "3333", 1, 1, 0));
+        cartArrayList.add(new Cart("2", R.mipmap.potatoes, "222222222222222222222", "3333", 1, 2, 0));
+        cartArrayList.add(new Cart("3", R.mipmap.tofu, "22222222222", "3333", 1, 3, 0));
+        cartArrayList.add(new Cart("4", R.mipmap.shoots, "222222222222222222222", "3333", 1, 4, 0));
+        cartArrayList.add(new Cart("5", R.mipmap.meat, "222222222222222222222", "3333", 1, 4, 0));
     }
 
     @Override
@@ -110,19 +111,20 @@ public class Cart_F extends Fragment implements View.OnClickListener {
             case R.id.cart_choose:
                 String position = String.valueOf(tag);
                 boolean selectedAll = true;
-                for(int i = 0; i<this.cartArrayList.size();i++){
+                for (int i = 0; i < this.cartArrayList.size(); i++) {
                     Cart cart = cartArrayList.get(i);
-                    if(position.equals(cart.getId())){
-                        int isSelected = cart.getIsSelected()==0?1:0;
+                    if (position.equals(cart.getId())) {
+                        int isSelected = cart.getIsSelected() == 0 ? 1 : 0;
                         cartArrayList.get(i).setIsSelected(isSelected);
                     }
-                    if(cart.getIsSelected()==0){
+                    if (cart.getIsSelected() == 0) {
                         selectedAll = false;
                     }
                 }
                 getTotalMoney();
                 ca.notifyDataSetChanged();
-                if(cartArrayList==null||cartArrayList.size()<=0) selectedAll = false;
+                if (cartArrayList == null || cartArrayList.size() <= 0)
+                    selectedAll = false;
                 if (selectedAll) {
                     allcheck.setBackground(getResources().getDrawable(R.drawable.checkboxon));
                     isChecked = true;
@@ -134,13 +136,13 @@ public class Cart_F extends Fragment implements View.OnClickListener {
             case R.id.cart_all_choice:
                 if (!isChecked) {
                     allcheck.setBackground(getResources().getDrawable(R.drawable.checkboxon));
-                    for(int i = 0; i<this.cartArrayList.size();i++){
+                    for (int i = 0; i < this.cartArrayList.size(); i++) {
                         cartArrayList.get(i).setIsSelected(1);
                     }
                     isChecked = true;
                 } else {
                     allcheck.setBackground(getResources().getDrawable(R.drawable.checkboxun));
-                    for(int i = 0; i<this.cartArrayList.size();i++){
+                    for (int i = 0; i < this.cartArrayList.size(); i++) {
                         cartArrayList.get(i).setIsSelected(0);
                     }
                     isChecked = false;
@@ -150,18 +152,17 @@ public class Cart_F extends Fragment implements View.OnClickListener {
                 break;
             case R.id.cart_delete:
                 String po = String.valueOf(tag);
-                int isSelected;
-                for(int i = 0; i<this.cartArrayList.size();i++){
-                   Cart cart = this.cartArrayList.get(i);
-                    if(po.equals(cart.getId())) {
+                for (int i = 0; i < this.cartArrayList.size(); i++) {
+                    Cart cart = this.cartArrayList.get(i);
+                    if (po.equals(cart.getId())) {
                         this.cartArrayList.remove(i);
                     }
                 }
-                for (int j = 0;j<this.cartArrayList.size();j++){
+                for (int j = 0; j < this.cartArrayList.size(); j++) {
                     Cart cart = cartArrayList.get(j);
-                    if(cart.getIsSelected()==0){
+                    if (cart.getIsSelected() == 0) {
                         allcheck.setBackground(getResources().getDrawable(R.drawable.checkboxun));
-                    }else{
+                    } else {
                         allcheck.setBackground(getResources().getDrawable(R.drawable.checkboxon));
                         isChecked = true;
                     }
@@ -177,10 +178,10 @@ public class Cart_F extends Fragment implements View.OnClickListener {
     private void getTotalMoney() {
         double total = 0.0;
         int num = 0;
-        for(int i = 0; i<this.cartArrayList.size();i++){
+        for (int i = 0; i < this.cartArrayList.size(); i++) {
             Cart cart = this.cartArrayList.get(i);
-            if(cart.getIsSelected()==1){
-                total += cart.getMoney()*cart.getNum();
+            if (cart.getIsSelected() == 1) {
+                total += cart.getMoney() * cart.getNum();
                 num += cart.getNum();
             }
         }

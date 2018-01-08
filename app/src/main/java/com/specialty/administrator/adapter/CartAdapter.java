@@ -20,7 +20,7 @@ import java.util.ArrayList;
  * Created by Administrator on 2017/12/20.
  */
 
-public class cartAdapter extends BaseAdapter {
+public class CartAdapter extends BaseAdapter {
     private Context context;
     private ArrayList<Cart> cartArrayList = null;
     private LayoutInflater inflater ;
@@ -44,7 +44,7 @@ public class cartAdapter extends BaseAdapter {
         this.onDlete = onDlete;
     }
 
-    public cartAdapter(ArrayList<Cart>cartArrayList,Context context){
+    public CartAdapter(ArrayList<Cart>cartArrayList, Context context){
         this.cartArrayList=cartArrayList;
         this.context=context;
         this.inflater = LayoutInflater.from(context);
@@ -89,6 +89,7 @@ public class cartAdapter extends BaseAdapter {
         holder=(Holder)view.getTag();
         }
         if (cartArrayList !=null){
+            holder.img.setImageResource(cartArrayList.get(position).getImg());
             holder.name.setText(cartArrayList.get(position).getName());
             holder.num.setText(String.valueOf(cartArrayList.get(position).getNum()));
             holder.taste.setText(cartArrayList.get(position).getTaste());

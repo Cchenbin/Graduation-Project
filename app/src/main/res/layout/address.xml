@@ -61,7 +61,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorpink"
+                android:background="@color/colorPink"
                 android:gravity="center"
                 android:text="@string/address_add"
                 android:textColor="@color/colorWhite"

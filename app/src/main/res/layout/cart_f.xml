@@ -32,59 +32,68 @@
             android:gravity="center"
             android:text="@string/cart_buy"/>
     </LinearLayout>
-    <!--空购物车界面结束，订单开始-->
-    <RelativeLayout
-        android:id="@+id/show_cart_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/cart_top"
-        android:orientation="vertical">
-        <LinearLayout
+    <!--空购物车界面结束，物品选择开始-->
+        <RelativeLayout
+            android:id="@+id/show_cart_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ListView
-                android:id="@+id/cart_list"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/cart_bt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
-            <CheckBox
-                android:id="@+id/cart_all_choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:button="@null"
-                android:background="@drawable/checkboxun"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:gravity="center"
-                android:text="@string/cart_all"/>
-            <TextView
-                android:id="@+id/cart_all"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:gravity="end|center"
-                android:text="@string/cart_all_money"/>
-            <TextView
-                android:id="@+id/tv_cart_buy_or_del"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:background="@color/colorRed"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="@string/cart_by_all"
-                android:textColor="@color/colorWhite" />
-        </LinearLayout>
-    </RelativeLayout>
+            android:layout_height="match_parent"
+            android:layout_below="@id/cart_top"
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:id="@+id/cart_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cart_all_choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/checkboxun"
+                    android:button="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="@string/cart_all"/>
+
+                <TextView
+                    android:id="@+id/cart_all"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="end|center"
+                    android:text="@string/cart_all_money"/>
+
+                <TextView
+                    android:id="@+id/tv_cart_buy_or_del"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/colorRed"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/cart_by_all"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/cart_bt"
+                android:fillViewport="true">
+
+                <ListView
+                    android:id="@+id/cart_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"/>
+            </ScrollView>
+        </RelativeLayout>
 </RelativeLayout>

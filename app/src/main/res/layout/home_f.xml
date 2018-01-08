@@ -11,7 +11,6 @@
     android:orientation="horizontal"
     android:layout_below="@+id/top"
     android:layout_marginTop="5dp"
-    android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true">
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +21,7 @@
         android:layout_height="160dp"
         android:background="@color/colorRed">
 
-    <com.specialty.administrator.abView.AbInnerViewPager
+    <com.specialty.administrator.abView.AbSlidingPlayView
         android:id="@+id/viewPager_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,7 +33,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="8dp"
-            android:background="@color/colorline" />
+            android:background="@color/colorLine" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -55,9 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp"
                 android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/im_notice"
                 android:layout_toEndOf="@+id/im_notice"
                 />
         </RelativeLayout>
@@ -66,7 +63,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="8dp"
-            android:background="@color/colorline" />
+            android:background="@color/colorLine" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,7 +88,7 @@
                     android:layout_marginTop="10dp"
                     android:drawableTop="@mipmap/dried"
                     android:text="@string/home_center_charge"
-                    android:textColor="@color/colorblack"
+                    android:textColor="@color/colorBlack"
                     android:gravity="center"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -110,11 +107,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/home_bottom_transaction"
                     android:drawableTop="@mipmap/fresh"
-                    android:textColor="@color/colorblack"
                     android:gravity="center"
-                    android:textSize="12sp" />
+                    android:text="@string/home_bottom_transaction"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -133,7 +130,7 @@
                     android:layout_marginTop="10dp"
                     android:drawableTop="@mipmap/information"
                     android:text="@string/home_center"
-                    android:textColor="@color/colorblack"
+                    android:textColor="@color/colorBlack"
                     android:gravity="center"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -154,7 +151,7 @@
                     android:layout_marginTop="10dp"
                     android:drawableTop="@mipmap/classfly"
                     android:text="@string/home_center_customerService"
-                    android:textColor="@color/colorblack"
+                    android:textColor="@color/colorBlack"
                     android:gravity="center"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -168,7 +165,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="8dp"
-            android:background="@color/colorline"/>
+            android:background="@color/colorLine"/>
         <TextView
             android:id="@+id/Recommend"
             android:layout_width="match_parent"
@@ -194,7 +191,7 @@
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorline" />
+                android:background="@color/colorLine" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -214,7 +211,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/colorline" />
+                    android:background="@color/colorLine" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -234,7 +231,7 @@
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:background="@color/colorline" />
+                        android:background="@color/colorLine" />
 
                     <ImageView
                         android:id="@+id/Recommend_4"
@@ -251,7 +248,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/colorline"/>
+            android:background="@color/colorLine"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -277,7 +274,7 @@
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorline" />
+                android:background="@color/colorLine" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -297,7 +294,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/colorline" />
+                    android:background="@color/colorLine" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -317,7 +314,7 @@
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:background="@color/colorline" />
+                        android:background="@color/colorLine" />
 
                     <ImageView
                         android:id="@+id/Recommend_8"

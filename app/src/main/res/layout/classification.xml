@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.specialty.administrator.classify.Classification">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/top_menu"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPink"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_meun"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/text_shape_checked"
+                android:gravity="center"
+                android:text="@string/classify_Comprehensive"
+                android:textColor="@color/colorPink"
+                android:textSize="@dimen/text_size_m"/>
+
+            <TextView
+                android:id="@+id/tv_meun1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/classify_sales"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_m"/>
+
+            <TextView
+                android:id="@+id/tv_meun2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/classify_new"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_m"/>
+
+            <TextView
+                android:id="@+id/tv_meun3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/classify_price"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_m"/>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/classify_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="5dp"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="20dp"/>
+    </LinearLayout>
+</RelativeLayout>

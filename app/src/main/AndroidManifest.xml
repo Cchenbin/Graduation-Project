@@ -29,6 +29,18 @@
             android:name="com.specialty.administrator.me.Logistics"
             android:label="@string/title_activity_logistivsitem">
         </activity>
+        <activity
+            android:name="com.specialty.administrator.classify.Classification"
+            android:label="@string/title_activity_classification">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.product.Product_details"
+            android:label="@string/title_activity_product_details">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me."
+            android:label="@string/title_activity_product_details">
+        </activity>
     </application>
 
 </manifest>

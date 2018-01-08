@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/presonal_center"
         android:orientation="vertical">
@@ -71,7 +70,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
                 android:padding="10dp"
                 android:text="@string/center_nickname"/>
@@ -80,7 +78,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
                 android:gravity="end|center"
                 android:text="@string/center_name"/>
         </LinearLayout>
@@ -89,8 +86,6 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="15dp"
             android:layout_marginStart="20dp"
             android:background="@color/colorGray"/>
 
@@ -107,7 +102,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
                 android:padding="10dp"
                 android:text="@string/center_Bind_phone"/>
@@ -128,8 +122,6 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="15dp"
             android:layout_marginStart="20dp"
             android:background="@color/colorGray"/>
         <LinearLayout
@@ -145,7 +137,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginStart="10dp"
                     android:padding="10dp"
                     android:text="@string/center_change_passward"/>

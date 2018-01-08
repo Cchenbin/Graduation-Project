@@ -6,7 +6,7 @@ package com.specialty.administrator.beans;
 
 public class Cart {
     private String id;
-    private String img;
+    private Integer img;
     private String name;
     private String taste;
     private int num;
@@ -14,7 +14,7 @@ public class Cart {
     private  int isSelected;//0,未选中，1选中
 
 
-    public Cart(String id ,String img, String name, String taste, int num, double money,int isSelected) {
+    public Cart(String id ,Integer img, String name, String taste, int num, double money,int isSelected) {
         this.id=id;
         this.img = img;
         this.name = name;
@@ -56,10 +56,10 @@ public class Cart {
         this.name = name;
     }
 
-    public String getImg() {
+    public Integer getImg() {
         return img;
     }
-    public void setImg(String img){
+    public void setImg(Integer img){
         this.img=img;
     }
 
