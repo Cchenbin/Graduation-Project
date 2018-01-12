@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.specialty.administrator.specialty.Main">
+    tools:context="com.specialty.administrator.specialty.MainActivity">
 
     <RelativeLayout
         android:id="@+id/lay_bottom"

@@ -1,7 +1,7 @@
 package com.specialty.administrator.beans;
 
 /**
- * Created by Administrator on 2018/1/5.
+ * Created by 陈彬 on 2018/1/5.
  */
 
 public class Product_detail {

@@ -1,11 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:background="@color/colorWhite">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
         android:orientation="horizontal">
 
         <TextView
@@ -23,9 +25,9 @@
             android:textSize="@dimen/text_size_m"/>
 
         <TextView
+            android:id="@+id/address_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:text="@string/address_phone_list"
             android:textSize="@dimen/text_size_m"/>
@@ -33,16 +35,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
 
         <TextView
+            android:id="@+id/address_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="@string/address_address_list"/>
     </LinearLayout>
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_marginLeft="5dp"
@@ -53,6 +57,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
         android:baselineAligned="false"
         android:orientation="horizontal">
 
@@ -62,11 +68,12 @@
             android:layout_weight="1">
 
             <ImageView
+                android:id="@+id/select"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:contentDescription="@string/img"
-                android:padding="10dp"
-                android:src="@drawable/addressyes"/>
+                android:src="@drawable/addressno"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,10 +90,11 @@
             android:baselineAligned="false">
 
             <LinearLayout
+                android:id="@+id/address_edit"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="right">
+                android:gravity="end">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -99,7 +107,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginStart="10dp"
                     android:gravity="center"
                     android:text="@string/address_edit_list"
@@ -107,6 +114,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/address_delete"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -124,7 +132,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginStart="10dp"
                     android:gravity="center"
                     android:text="@string/address_delete_list"
@@ -134,7 +141,14 @@
     </LinearLayout>
 
     <View
+        android:id="@+id/address_view"
         android:layout_width="match_parent"
         android:layout_height="3dp"
+        android:layout_marginTop="20dp"
         android:background="@mipmap/addressview"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorLine"/>
 </LinearLayout>

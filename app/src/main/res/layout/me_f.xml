@@ -4,9 +4,11 @@
                 android:layout_height="match_parent"
                 tools:context="com.specialty.administrator.me.Me_F">
 
-    <include
+    <View
         android:id="@+id/user_top"
-        layout="@layout/top_menu_all"/>
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/colorYellow"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -62,6 +64,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/user_name"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -73,15 +76,15 @@
                             android:id="@+id/user_edit"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:contentDescription="@string/img"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp"
+                            android:contentDescription="@string/img"
                             android:src="@mipmap/edit"/>
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/my_set"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
@@ -90,8 +93,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="@string/img"
                         android:layout_marginTop="5dp"
+                        android:contentDescription="@string/img"
                         android:src="@mipmap/set"/>
                 </LinearLayout>
             </LinearLayout>
@@ -104,16 +107,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:baselineAligned="false"
+                android:orientation="horizontal"
                 android:padding="10dp">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="end"
-                    android:layout_weight="0.3"
-                    android:gravity="end">
+                    android:layout_weight="0.3">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -129,6 +131,7 @@
                     android:gravity="end">
 
                     <TextView
+                        android:id="@+id/all_order"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -156,226 +159,127 @@
                 android:layout_height="2dp"
                 android:background="@color/colorGray"/>
 
-            <LinearLayout
+            <com.specialty.administrator.view.MyGridView
+                android:id="@+id/me_gridView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:baselineAligned="false">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableTop="@mipmap/user_3"
-                        android:text="@string/user_pendingPayment"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableTop="@mipmap/user_4"
-                        android:text="@string/user_delivered"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/received"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableTop="@mipmap/user_5"
-                        android:text="@string/user_received"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableTop="@mipmap/user_6"
-                        android:text="@string/user_evaluated"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:baselineAligned="false">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableTop="@mipmap/like"
-                        android:text="@string/user_collection"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableTop="@mipmap/address"
-                        android:text="@string/user_address"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableTop="@mipmap/porblem"
-                        android:text="@string/user_problem"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableTop="@mipmap/about"
-                        android:text="@string/user_about"/>
-                </LinearLayout>
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:horizontalSpacing="5dp"
+                android:numColumns="4"
+                android:padding="5dp"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="20dp"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
                 android:background="@color/colorGray"/>
+
             <LinearLayout
+                android:id="@+id/ll_menu1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:padding="10dp"
                     android:text="@string/user_sever"
-                    android:padding="10dp"
                     android:textSize="@dimen/text_size_m"/>
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="0.1"
                     android:contentDescription="@string/img"
-                    android:layout_gravity="center"
                     android:src="@mipmap/rarrow"/>
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
                 android:background="@color/colorGray"/>
+
             <LinearLayout
+                android:id="@+id/ll_menu2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:padding="10dp"
                     android:text="@string/user_help"
-                    android:padding="10dp"
                     android:textSize="@dimen/text_size_m"/>
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="0.1"
                     android:contentDescription="@string/img"
-                    android:layout_gravity="center"
                     android:src="@mipmap/rarrow"/>
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
                 android:background="@color/colorGray"/>
+
             <LinearLayout
+                android:id="@+id/ll_menu3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:padding="10dp"
                     android:text="@string/user_link"
-                    android:padding="10dp"
                     android:textSize="@dimen/text_size_m"/>
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="0.1"
                     android:contentDescription="@string/img"
-                    android:layout_gravity="center"
                     android:src="@mipmap/rarrow"/>
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
                 android:background="@color/colorGray"/>
+
             <LinearLayout
+                android:id="@+id/ll_menu4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/user_coupon"
                     android:padding="10dp"
+                    android:text="@string/user_coupon"
                     android:textSize="@dimen/text_size_m"/>
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.1"
                     android:layout_gravity="center"
+                    android:layout_weight="0.1"
                     android:contentDescription="@string/img"
                     android:src="@mipmap/rarrow"/>
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"

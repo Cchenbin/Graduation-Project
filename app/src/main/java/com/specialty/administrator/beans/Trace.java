@@ -1,7 +1,7 @@
 package com.specialty.administrator.beans;
 
 /**
- * Created by Administrator on 2017/12/25.
+ * Created by 陈彬 on 2017/12/25.
  */
 
 public class Trace {

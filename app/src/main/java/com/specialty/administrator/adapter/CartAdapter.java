@@ -17,7 +17,7 @@ import com.specialty.administrator.specialty.R;
 import java.util.ArrayList;
 
 /**
- * Created by Administrator on 2017/12/20.
+ * Created by 陈彬 on 2017/12/20.
  */
 
 public class CartAdapter extends BaseAdapter {

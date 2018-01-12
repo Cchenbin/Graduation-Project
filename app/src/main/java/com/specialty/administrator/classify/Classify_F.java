@@ -1,5 +1,6 @@
 package com.specialty.administrator.classify;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,9 +34,19 @@ public class Classify_F extends Fragment implements View.OnClickListener {
     private Integer[] images = {R.mipmap.peanut, R.mipmap.potatoes, R.mipmap.tofu, R.mipmap.shoots, R.mipmap.meat};
     private String[] title = new String[]{"地瓜干", "花生", "笋干", "豆腐干", "肉干"};
     private Integer[] image = {R.mipmap.potatoes, R.mipmap.peanut, R.mipmap.shoots, R.mipmap.tofu, R.mipmap.meat};
+
     public Classify_F() {
         // Required empty public constructor
     }
+
+    private String name;
+
+    @SuppressLint("ValidFragment")
+    public Classify_F(String name) {
+        super();
+        this.name = name;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,6 +61,16 @@ public class Classify_F extends Fragment implements View.OnClickListener {
         gridView_adapter = new Classify_gridView_Adapter(titles, images, context);
         gridView.setAdapter(gridView_adapter);
         initData();
+        if (name != null) {
+            for (int i = 0; i < classifyArrayList.size(); i++) {
+                String type = classifyArrayList.get(i).getClassify();
+                classifyArrayList.get(i).setIsSelected(0);
+                if (name.equals(type)) {
+                    classifyArrayList.get(i).setIsSelected(1);
+
+                }
+            }
+        }
         return rootView;
     }
 
@@ -64,7 +85,7 @@ public class Classify_F extends Fragment implements View.OnClickListener {
                 startActivity(intent);
             }
         });
-        foSearch= rootView.findViewById(R.id.foSearch);
+        foSearch = rootView.findViewById(R.id.foSearch);
         foSearch.setVisibility(View.VISIBLE);
         classify_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -77,16 +98,15 @@ public class Classify_F extends Fragment implements View.OnClickListener {
                 }
                 classifyArrayList.get(position).setIsSelected(1);
                 classify_list.setAdapter(ClassAdapter);
-                if(position==0){
+                if (position == 0) {
                     gridView_adapter = new Classify_gridView_Adapter(titles, images, context);
                     gridView.setAdapter(gridView_adapter);
-                }else if (position==1){
+                } else if (position == 1) {
                     gridView_adapter = new Classify_gridView_Adapter(title, image, context);
                     gridView.setAdapter(gridView_adapter);
                 }
             }
         });
-
     }
 
     private void initData() {

@@ -12,13 +12,14 @@ import android.widget.TextView;
 
 import com.specialty.administrator.cart.Cart_F;
 import com.specialty.administrator.classify.Classify_F;
+import com.specialty.administrator.home.HeadPageCallback;
 import com.specialty.administrator.home.Home_F;
 import com.specialty.administrator.me.Me_F;
 
 import static com.specialty.administrator.specialty.R.layout.main;
 
 
-public class Main extends FragmentActivity implements View.OnClickListener {
+public class MainActivity extends FragmentActivity implements View.OnClickListener, HeadPageCallback {
     /*界面底部菜单按钮*/
     private TextView[] tv_menu = new TextView[4];
     /*界面底部菜单区域*/
@@ -158,6 +159,65 @@ public class Main extends FragmentActivity implements View.OnClickListener {
                 tv_menu[i].setCompoundDrawablesWithIntrinsicBounds(null, ContextCompat.getDrawable(this, select_on[i]), null, null);
                 tv_menu[i].setTextColor(ContextCompat.getColor(this, R.color.colorChecked));
             }
+        }
+    }
+
+    @Override
+    public void HeadPageBtnCall(LinearLayout llbtn) {
+        if (llbtn.getId() == R.id.tv_home_charge) {
+            ll_menu[2].performClick();
+        }
+    }
+
+    @Override
+    public void HeadPageBtnCall(TextView tv) {
+        if (tv.getId() == R.id.tv_home_charge) {
+            if (classify_f == null) {
+                classify_f = new Classify_F("干货");
+                addFragment(classify_f);
+                showFragment(classify_f);
+            } else {
+                if (classify_f.isHidden()) {
+                    showFragment(classify_f);
+                }
+            }
+        }else if (tv.getId() == R.id.tv_home_trade){
+            if (classify_f == null) {
+                classify_f = new Classify_F("生鲜");
+                addFragment(classify_f);
+                showFragment(classify_f);
+            } else {
+                if (classify_f.isHidden()) {
+                    showFragment(classify_f);
+                }
+            }
+        }else if (tv.getId() == R.id.tv_home_help){
+            if (classify_f == null) {
+                classify_f = new Classify_F("2");
+                addFragment(classify_f);
+                showFragment(classify_f);
+            } else {
+                if (classify_f.isHidden()) {
+                    showFragment(classify_f);
+                }
+            }
+        }else if (tv.getId() == R.id.tv_home_customerService){
+            if (classify_f == null) {
+                classify_f = new Classify_F("分类");
+                addFragment(classify_f);
+                showFragment(classify_f);
+            } else {
+                if (classify_f.isHidden()) {
+                    showFragment(classify_f);
+                }
+            }
+        }
+         /*设置按钮的未选中状态资源*/
+        for (int i = 0; i < tv_menu.length; i++) {
+            tv_menu[i].setCompoundDrawablesWithIntrinsicBounds(null, ContextCompat.getDrawable(this, select_un[i]), null, null);
+            tv_menu[i].setTextColor(ContextCompat.getColor(this, R.color.colorUnchecked));
+            tv_menu[1].setCompoundDrawablesWithIntrinsicBounds(null, ContextCompat.getDrawable(this, select_on[1]), null, null);
+            tv_menu[1].setTextColor(ContextCompat.getColor(this, R.color.colorChecked));
         }
     }
 }

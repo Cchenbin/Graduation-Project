@@ -1,7 +1,7 @@
 package com.specialty.administrator.beans;
 
 /**
- * Created by Administrator on 2018/1/4.
+ * Created by 陈彬 on 2018/1/4.
  */
 
 public class Evaluation {

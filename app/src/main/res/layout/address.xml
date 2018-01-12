@@ -2,14 +2,14 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="com.specialty.administrator.me.Address">
+                tools:context="com.specialty.administrator.me.AddressActivity">
 
     <include
         android:id="@+id/address_top"
         layout="@layout/top_all"/>
 
-    <LinearLayout
-        android:id="@+id/no_address"
+    <RelativeLayout
+        android:id="@+id/show_cart_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/address_top"
@@ -17,12 +17,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -34,38 +33,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/address_no"/>
-
         </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:visibility="gone">
-            <ListView
-                android:id="@+id/cart_list"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"/>
-        </RelativeLayout>
-
         <LinearLayout
+            android:id="@+id/cart_bt"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="bottom"
-            android:layout_weight="0.1"
-            android:gravity="center">
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
 
             <Button
+                android:id="@+id/Add_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPink"
-                android:gravity="center"
                 android:text="@string/address_add"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/text_size_m"/>
         </LinearLayout>
-    </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/cart_bt"
+            android:fillViewport="true">
+
+            <ListView
+                android:id="@+id/address_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"/>
+        </ScrollView>
+    </RelativeLayout>
 </RelativeLayout>

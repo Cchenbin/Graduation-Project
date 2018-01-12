@@ -1,6 +1,7 @@
 package com.specialty.administrator.home;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,13 +12,14 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.specialty.administrator.abView.AbSlidingPlayView;
+import com.specialty.administrator.classify.Classification;
 import com.specialty.administrator.specialty.R;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static android.R.attr.value;
+import static com.specialty.administrator.specialty.R.id.tv_home_customerService;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,12 +35,13 @@ public class Home_F extends Fragment implements View.OnClickListener {
     private int mCurrPos = 0;
     private ArrayList<String> hAnnounList = new ArrayList<>();
     private TextView[] tv_menu = new TextView[4];
-    private int[] tv_menu_id = {R.id.tv_home_charge, R.id.tv_home_trade, R.id.tv_home_help, R.id.tv_home_customerService};
+    private int[] tv_menu_id = {R.id.tv_home_charge, R.id.tv_home_trade, R.id.tv_home_help, tv_home_customerService};
+    private ImageView[] im_view = new ImageView[8];
+    private int[] im_view_id = {R.id.Recommend_1, R.id.Recommend_2, R.id.Recommend_3, R.id.Recommend_4, R.id.Recommend_5, R.id.Recommend_6, R.id.Recommend_7, R.id.Recommend_8};
 
     public Home_F() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,9 +63,13 @@ public class Home_F extends Fragment implements View.OnClickListener {
         initViewPager();
         initViewFlipper();
         mVf_notice = view.findViewById(R.id.home_notice_vf);
-        for (int i=0;i<tv_menu.length;i++){
-            tv_menu[i]=view.findViewById(tv_menu_id[i]);
+        for (int i = 0; i < tv_menu.length; i++) {
+            tv_menu[i] = view.findViewById(tv_menu_id[i]);
             tv_menu[i].setOnClickListener(this);
+        }
+        for (int j = 0; j < im_view.length; j++) {
+            im_view[j] = view.findViewById(im_view_id[j]);
+            im_view[j].setOnClickListener(this);
         }
 
     }
@@ -85,8 +92,12 @@ public class Home_F extends Fragment implements View.OnClickListener {
         viewPager.addViews(allListView);
         //开始轮播
         viewPager.startPlay();
+    }
 
-
+    private void initData() {
+        hAnnounList.add("首页测试公告1");
+        hAnnounList.add("首页测试公告2");
+        hAnnounList.add("首页测试公告3");
     }
 
     /**
@@ -96,8 +107,7 @@ public class Home_F extends Fragment implements View.OnClickListener {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                getActivity().runOnUiThread(new Runnable() {
-
+                Home_F.this.getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         moveNext();
@@ -108,12 +118,6 @@ public class Home_F extends Fragment implements View.OnClickListener {
         };
         Timer timer = new Timer();
         timer.schedule(task, 0, 4000);
-    }
-
-    private void initData() {
-        hAnnounList.add("首页测试公告1");
-        hAnnounList.add("首页测试公告2");
-        hAnnounList.add("首页测试公告3");
     }
 
     /**
@@ -168,15 +172,61 @@ public class Home_F extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        switch(view.getId()){
+        switch (view.getId()) {
             case R.id.tv_home_charge:
-
-                 break;
-            case value:
+                if (getActivity() instanceof HeadPageCallback) {
+                    ((HeadPageCallback) getActivity()).HeadPageBtnCall(tv_menu[0]);
+                }
 
                 break;
+            case R.id.tv_home_trade:
+                if (getActivity() instanceof HeadPageCallback) {
+                    ((HeadPageCallback) getActivity()).HeadPageBtnCall(tv_menu[1]);
+                }
+                break;
+            case R.id.tv_home_help:
+                if (getActivity() instanceof HeadPageCallback) {
+                    ((HeadPageCallback) getActivity()).HeadPageBtnCall(tv_menu[2]);
+                }
+                break;
+            case R.id.tv_home_customerService:
+                if (getActivity() instanceof HeadPageCallback) {
+                    ((HeadPageCallback) getActivity()).HeadPageBtnCall(tv_menu[3]);
+                }
+                break;
+            case R.id.Recommend_1:
+                Intent intent = new Intent(Home_F.this.getActivity(), Classification.class);
+                startActivity(intent);
+                break;
+            case R.id.Recommend_2:
+                Intent intent2 = new Intent(Home_F.this.getActivity(), Classification.class);
+                startActivity(intent2);
+                break;
+            case R.id.Recommend_3:
+                Intent intent3 = new Intent(Home_F.this.getActivity(), Classification.class);
+                startActivity(intent3);
+                break;
+            case R.id.Recommend_4:
+                Intent intent4 = new Intent(Home_F.this.getActivity(), Classification.class);
+                startActivity(intent4);
+                break;
+            case R.id.Recommend_5:
+                Intent intent5 = new Intent(Home_F.this.getActivity(), Classification.class);
+                startActivity(intent5);
+                break;
+            case R.id.Recommend_6:
+                Intent intent6 = new Intent(Home_F.this.getActivity(), Classification.class);
+                startActivity(intent6);
+                break;
+            case R.id.Recommend_7:
+                Intent intent7 = new Intent(Home_F.this.getActivity(), Classification.class);
+                startActivity(intent7);
+                break;
+            case R.id.Recommend_8:
+                Intent intent8 = new Intent(Home_F.this.getActivity(), Classification.class);
+                startActivity(intent8);
+                break;
             default:
-
                 break;
         }
     }

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.specialty.administrator.specialty">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -38,8 +41,49 @@
             android:label="@string/title_activity_product_details">
         </activity>
         <activity
-            android:name="com.specialty.administrator.me."
+            android:name="com.specialty.administrator.me.AddressActivity"
             android:label="@string/title_activity_product_details">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.CollectionActivity"
+            android:label="@string/title_activity_collection">
+        </activity>
+        <activity android:name="com.specialty.administrator.me.AddAddress">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.OrderActivity"
+            android:label="@string/title_activity_order">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.FeedbackActivity"
+            android:label="@string/title_activity_feedback">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.AboutActivity"
+            android:label="@string/title_activity_about">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.WebViewActivity"
+            android:label="@string/title_activity_sever">
+        </activity>
+        <activity android:name="com.specialty.administrator.me.PersonalCenter">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.EditNameActivity"
+            android:label="@string/title_activity_edit_name"
+            android:theme="@style/MyDialogStyle">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.OrderConfirmActivity"
+            android:label="@string/title_activity_orcer_details">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.OrderDetail"
+            android:label="@string/title_activity_order_detail">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.CommentActivity"
+            android:label="@string/title_activity_comment">
         </activity>
     </application>
 

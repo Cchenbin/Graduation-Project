@@ -12,6 +12,7 @@
     <string name="hello_blank_fragment1">fragment2</string>
     <string name="hello_blank_fragment2">fragment3</string>
     <string name="hello_blank_fragment3">fragment4</string>
+    <string name="title_activity_orcer_details">Orcer_detailsActivity</string>
     <!--首页-->
     <string name="Search">搜索</string>
     <string name="refrech">消息</string>
@@ -53,6 +54,15 @@
     <string name="user_help">帮助中心</string>
     <string name="user_link">友情链接</string>
     <string name="user_coupon">优惠券</string>
+    <string name="feedback">请详细的说明你遇到的问题</string>
+    <string name="feedback_button"> 提交</string>
+    <string name="about">关于APP的服务条款</string>
+    <string name="sever">服务条款</string>
+    <string name="privacy">隐私声明</string>
+    <string name="sever_name">App服务条款</string>
+    <string name="edit_username">更改用户名!</string>
+    <string name="edit_hint">请输入新用户名</string>
+    <string name="edit_btn">确定</string>
     <!--分类界面-->
     <string name="classify_name">干果</string>
     <string name="classify_peanut">花生</string>
@@ -115,5 +125,42 @@
     <string name="title_activity_logistivsitem">Logistivsitem</string>
     <string name="title_activity_classification">Classification</string>
     <string name="title_activity_product_details">product_details</string>
+    <string name="title_activity_collection">CollectionActivity</string>
+    <string name="title_activity_order">OrderActivity</string>
+    <!--订单界面-->
+    <string name="order_null">当前没有此类订单</string>
+    <string name="order_new">快去下单试试～</string>
+    <string name="title_activity_feedback">FeedbackActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_sever">SeverActivity</string>
+    <string name="title_activity_edit_name">Edit_nameActivity</string>
+    <string name="order_status">等待买家未付款</string>
+    <string name="order_total">合计:</string>
+    <string name="order_cancel">取消订单</string>
+    <string name="order_payment">去付款</string>
+    <string name="order_View_Logistics">查看物流</string>
+    <string name="order_Confirm_Receipt">确定收货</string>
+    <string name="order_evaluate">去评价</string>
+    <string name="order_buy_again">再次购买</string>
+    <string name="order_num">×1</string>
+    <string name="order_receiver">收货人：</string>
+    <string name="order_address">收货地址：</string>
+    <string name="order_method">发货方式</string>
+    <string name="order_delivery">快递：6元</string>
+    <string name="order_total_num">记单总件</string>
+    <string name="order_select">选择支付方式</string>
+    <string name="order_alipay">支付宝</string>
+    <string name="order_confirm">确认</string>
+    <string name="title_activity_order_detail">OrderDetail</string>
+    <string name="order_discount">满减优惠</string>
+    <string name="order_deliverys">快递</string>
+    <string name="order_actually">实付款（含运费）</string>
+    <string name="order_numbering">订单编号:</string>
+    <string name="order_transaction">支付交易号:</string>
+    <string name="order_create">创建时间:</string>
+    <string name="order_payment_time">付款时间:</string>
+    <string name="order_carry">完成时间:</string>
+    <string name="title_activity_comment">CommentActivity</string>
+    <string name="order_comment">宝贝满足你的期待吗？说说它的优点和美中不足的地方吧</string>
 
 </resources>

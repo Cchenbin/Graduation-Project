@@ -16,6 +16,7 @@
     <color name="colorLogisicsText">#999999</color>
     <color name="colorClassify">#DDDDDD</color>
     <color name="colorAddCart">#F8B551</color>
+    <color name="colorOrder">#333333</color>
     <!-- 透明度 -->
     <color name="background_transport">#80000000</color>
 

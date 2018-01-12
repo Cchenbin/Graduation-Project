@@ -14,7 +14,7 @@ import com.specialty.administrator.specialty.R;
 import java.util.ArrayList;
 
 /**
- * Created by Administrator on 2018/1/2.
+ * Created by 陈彬 on 2018/1/2.
  */
 
 public class ClassifyAdapter extends BaseAdapter {
@@ -51,6 +51,7 @@ public class ClassifyAdapter extends BaseAdapter {
             holder = new Holder();
             holder.name = view.findViewById(R.id.list_classify_name);
             holder.line = view.findViewById(R.id.list_classify_line);
+            view.setTag(holder);
         } else {
             holder = (Holder) view.getTag();
         }

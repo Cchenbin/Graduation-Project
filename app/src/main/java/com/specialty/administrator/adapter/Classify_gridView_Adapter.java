@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2018/1/3.
+ * Created by 陈彬 on 2018/1/3.
  */
 
 public class Classify_gridView_Adapter extends BaseAdapter {
@@ -66,6 +66,7 @@ public class Classify_gridView_Adapter extends BaseAdapter {
         Picture picture = pictures.get(position);
         holder.image.setImageResource(picture.getImageId());
         holder.title.setText(picture.getTitle());
+
         return view;
     }
 

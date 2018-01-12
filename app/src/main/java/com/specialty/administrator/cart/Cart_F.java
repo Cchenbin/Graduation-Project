@@ -1,6 +1,7 @@
 package com.specialty.administrator.cart;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,9 +10,11 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.specialty.administrator.adapter.CartAdapter;
 import com.specialty.administrator.beans.Cart;
+import com.specialty.administrator.me.OrderConfirmActivity;
 import com.specialty.administrator.specialty.R;
 
 import java.util.ArrayList;
@@ -53,13 +56,13 @@ public class Cart_F extends Fragment implements View.OnClickListener {
     }
 
     private void initView() {
-        cart_list = rootView.findViewById(R.id.cart_list);
         check = rootView.findViewById(R.id.cart_choose);
         cart_all = rootView.findViewById(R.id.cart_all);
         tv_cart_buy_or_del = rootView.findViewById(R.id.tv_cart_buy_or_del);
+        tv_cart_buy_or_del.setOnClickListener(this);
         allcheck = rootView.findViewById(R.id.cart_all_choice);
         allcheck.setOnClickListener(this);
-
+        cart_list = rootView.findViewById(R.id.cart_list);
     }
 
     private void initData() {
@@ -170,6 +173,15 @@ public class Cart_F extends Fragment implements View.OnClickListener {
                 getTotalMoney();
                 ca.notifyDataSetChanged();
                 break;
+            case R.id.tv_cart_buy_or_del:
+                String Settlement = tv_cart_buy_or_del.getText().toString();
+                if (Settlement.equals("结算(" + 0 + ")")) {
+                    Toast.makeText(Cart_F.this.getActivity(), "亲，还未选定商品哦", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent cart_order = new Intent(Cart_F.this.getActivity(), OrderConfirmActivity.class);
+                    startActivity(cart_order);
+                }
+                break;
             default:
         }
     }
@@ -185,7 +197,7 @@ public class Cart_F extends Fragment implements View.OnClickListener {
                 num += cart.getNum();
             }
         }
-        cart_all.setText("合计 ：¥" + total);
+        cart_all.setText("合计 ：¥" + total+"");
         tv_cart_buy_or_del.setText("结算(" + num + ")");
     }
 }

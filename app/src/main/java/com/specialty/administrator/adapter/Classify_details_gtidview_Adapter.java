@@ -14,7 +14,7 @@ import com.specialty.administrator.specialty.R;
 import java.util.ArrayList;
 
 /**
- * Created by Administrator on 2018/1/5.
+ * Created by 陈彬 on 2018/1/5.
  */
 
 public class Classify_details_gtidview_Adapter extends BaseAdapter {
@@ -35,12 +35,12 @@ public class Classify_details_gtidview_Adapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return product_detailses.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override

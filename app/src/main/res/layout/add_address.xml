@@ -2,18 +2,20 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="com.specialty.administrator.me.Add_address">
+                tools:context="com.specialty.administrator.me.AddAddress">
 
     <include
-        android:id="@+id/Add_address"
+        android:id="@+id/Add_address_top"
         layout="@layout/top_all"/>
 
     <LinearLayout
+        android:layout_below="@id/Add_address_top"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/Add_address"
         android:background="@color/colorGray"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
 
         <View
             android:layout_width="match_parent"
@@ -34,9 +36,11 @@
                 android:textSize="@dimen/text_size_m"/>
 
             <EditText
+                android:id="@+id/Receiver"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/address"
+                android:layout_marginStart="30dp"
                 android:hint=""/>
         </LinearLayout>
 
@@ -53,17 +57,20 @@
             android:padding="15dp">
 
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/address_phone"
                 android:textSize="@dimen/text_size_m"/>
 
             <EditText
+                android:id="@+id/address_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="phone"
                 android:maxLength="11"
                 android:background="@drawable/address"
+                android:layout_marginStart="15dp"
                 android:hint=""/>
         </LinearLayout>
 
@@ -92,8 +99,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/address"
                 android:scrollHorizontally="false"
-                android:hint=""
-                android:padding="30dp"/>
+                android:layout_marginStart="15dp"
+                android:hint=""/>
         </LinearLayout>
 
         <View
@@ -118,11 +125,14 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="right"
                 android:gravity="right">
-            <ImageView
+            <CheckBox
+                android:id="@+id/checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom"
-                android:src="@drawable/addressno"/>
+                android:background="@drawable/checkboxun"
+                android:button="@null"
+                />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
