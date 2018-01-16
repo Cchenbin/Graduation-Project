@@ -20,6 +20,7 @@
             android:src="@drawable/log"/>
 
         <ImageView
+            android:id="@+id/log_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/img"
@@ -30,28 +31,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:orientation="horizontal"
         android:padding="10dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:contentDescription="@string/img"
-            android:src="@mipmap/count"/>
-
         <EditText
+            android:id="@+id/log_account"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
             android:background="@drawable/address"
+            android:drawablePadding="10dp"
+            android:drawableStart="@mipmap/count"
             android:hint="@string/log_account"
-            android:inputType="text"
-            android:textColor="@color/colorGray"
-            android:textSize="@dimen/text_size_mm"/>
+            android:padding="8dp"
+            android:textColorHint="@color/colorLogisicsText"
+            android:textSize="@dimen/text_size_m"/>
     </LinearLayout>
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/colorGray"/>
@@ -59,32 +56,46 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:orientation="horizontal"
         android:padding="10dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:contentDescription="@string/img"
-            android:src="@mipmap/login_pwd"/>
-
         <EditText
+            android:id="@+id/log_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="20dp"
             android:background="@drawable/address"
+            android:drawablePadding="10dp"
+            android:drawableStart="@mipmap/login_pwd"
             android:hint="@string/log_pwd"
-            android:inputType="text"
-            android:textColor="@color/colorGray"
-            android:textSize="@dimen/text_size_mm"/>
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColorHint="@color/colorLogisicsText"
+            android:textSize="@dimen/text_size_m"/>
     </LinearLayout>
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/colorGray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/log_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/log_forget"
+            android:textColor="@color/colorLogisicsText"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -92,6 +103,7 @@
         android:gravity="center">
 
         <Button
+            android:id="@+id/log_confirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"

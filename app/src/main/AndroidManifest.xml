@@ -12,16 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".login"
+            android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".login"
-            android:label="@string/title_activity_login">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -88,6 +88,14 @@
         <activity
             android:name="com.specialty.administrator.classify.ChooseTasteActivity"
             android:theme="@style/MyDialogStyleBottom">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.PasswordActivity"
+            android:label="@string/title_activity_password">
+        </activity>
+        <activity
+            android:name=".ForgetActivity"
+            android:label="@string/title_activity_forget">
         </activity>
     </application>
 

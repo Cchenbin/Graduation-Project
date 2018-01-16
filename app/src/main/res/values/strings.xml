@@ -121,10 +121,14 @@
     <string name="center_Bind_phone">绑定手机</string>
     <string name="center_change_passward">修改密码</string>
     <string name="title_activity_login">login</string>
+    <string name="center_password">登录密码</string>
+    <string name="center_newpassword">请输入新密码</string>
+    <string name="center_confirm_password">确认新密码</string>
     <!--登录界面-->
-    <string name="log_account">请输入手机号</string>
-    <string name="log_pwd">请输入手机号</string>
+    <string name="log_account">请输入登录账号</string>
+    <string name="log_pwd">请输入密码</string>
     <string name="log_log">登录</string>
+    <string name="log_forget">忘记密码?</string>
     <string name="logistics_top">物流信息</string>
     <!--查看物流-->
     <string name="logis_trace_info">已发货</string>
@@ -170,5 +174,7 @@
     <string name="title_activity_comment">CommentActivity</string>
     <string name="order_comment">宝贝满足你的期待吗？说说它的优点和美中不足的地方吧</string>
     <string name="title_activity_choose_taste">ChooseTasteActivity</string>
+    <string name="title_activity_password">PasswordActivity</string>
+    <string name="title_activity_forget">ForgetActivity</string>
 
 </resources>

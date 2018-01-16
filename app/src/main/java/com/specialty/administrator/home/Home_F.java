@@ -177,7 +177,6 @@ public class Home_F extends Fragment implements View.OnClickListener {
                 if (getActivity() instanceof HeadPageCallback) {
                     ((HeadPageCallback) getActivity()).HeadPageBtnCall(tv_menu[0]);
                 }
-
                 break;
             case R.id.tv_home_trade:
                 if (getActivity() instanceof HeadPageCallback) {
