@@ -1,11 +1,6 @@
 
 package com.specialty.administrator.abView;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -28,6 +23,11 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 名称：AbPlayView 描述：可播放显示的View.
  * 
@@ -35,6 +35,7 @@ import android.widget.ScrollView;
  * @date 2014-09-26
  * @version
  */
+@SuppressWarnings("ResourceType")
 @SuppressLint("HandlerLeak")
 public class AbSlidingPlayView extends LinearLayout {
 

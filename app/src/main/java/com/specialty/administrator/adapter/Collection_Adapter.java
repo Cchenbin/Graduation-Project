@@ -21,6 +21,7 @@ public class Collection_Adapter extends BaseAdapter {
     private ArrayList<Collection> collections = new ArrayList<>();
     private Context context;
     private LayoutInflater inflater;
+    private View.OnClickListener delete;
 
     public Collection_Adapter(ArrayList<Collection> collections, Context context) {
         this.collections = collections;
@@ -54,6 +55,7 @@ public class Collection_Adapter extends BaseAdapter {
             holder.name = view.findViewById(R.id.collection_name);
             holder.money = view.findViewById(R.id.collection_money);
             holder.delete = view.findViewById(R.id.collection_delete);
+            holder.delete.setOnClickListener(delete);
             view.setTag(holder);
         } else {
             holder = (Holder) view.getTag();
@@ -61,7 +63,13 @@ public class Collection_Adapter extends BaseAdapter {
         holder.image.setImageResource(collections.get(position).getImage());
         holder.name.setText(collections.get(position).getName());
         holder.money.setText(collections.get(position).getMoney());
+        holder.delete.setTag(collections.get(position).getId());
+        view.setTag(holder);
         return view;
+    }
+
+    public void setDelete(View.OnClickListener delete) {
+        this.delete = delete;
     }
 
     public class Holder {

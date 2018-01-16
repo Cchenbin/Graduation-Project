@@ -92,7 +92,14 @@
     <string name="details_shelf">保质期</string>
     <string name="details_packing">包装方式</string>
     <string name="details_specifica">规格</string>
-    <string name="details_weight">重量(g)</string>
+    <string name="details_weight">重量(g):</string>
+    <string name="details_stock">库存:</string>
+    <string name="details_weight_num">20(g)</string>
+    <string name="details_inventory">123456</string>
+    <string name="details_tastes">口味:</string>
+    <string name="details_spicy">香辣</string>
+    <string name="details_Num">1</string>
+    <string name="details_unit">件</string>
     <!--收货地址-->
     <string name="address_top">管理收货地址</string>
     <string name="address_no">暂无收货地址～</string>
@@ -162,5 +169,6 @@
     <string name="order_carry">完成时间:</string>
     <string name="title_activity_comment">CommentActivity</string>
     <string name="order_comment">宝贝满足你的期待吗？说说它的优点和美中不足的地方吧</string>
+    <string name="title_activity_choose_taste">ChooseTasteActivity</string>
 
 </resources>

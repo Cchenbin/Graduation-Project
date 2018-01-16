@@ -85,6 +85,10 @@
             android:name="com.specialty.administrator.me.CommentActivity"
             android:label="@string/title_activity_comment">
         </activity>
+        <activity
+            android:name="com.specialty.administrator.classify.ChooseTasteActivity"
+            android:theme="@style/MyDialogStyleBottom">
+        </activity>
     </application>
 
 </manifest>

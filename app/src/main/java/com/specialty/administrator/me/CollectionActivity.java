@@ -30,7 +30,9 @@ public class CollectionActivity extends Activity implements View.OnClickListener
         initView();
         initData();
         collection_adapter = new Collection_Adapter(collections, context);
+        collection_adapter.setDelete(this);
         listView.setAdapter(collection_adapter);
+
     }
 
     private void initView() {
@@ -53,9 +55,22 @@ public class CollectionActivity extends Activity implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
+        Object tag = view.getTag();
+        String position = String.valueOf(tag);
         switch (view.getId()) {
             case R.id.top_all_ImageView:
                 finish();
+                break;
+            case R.id.collection_delete:
+                if (tag!=null){
+                    for (int i = 0; i < this.collections.size(); i++) {
+                        Collection collectionss = this.collections.get(i);
+                        if (position.equals((collectionss.getId() + ""))) {
+                            this.collections.remove(i);
+                        }
+                    }
+                    collection_adapter.notifyDataSetChanged();
+                }
                 break;
             default:
         }

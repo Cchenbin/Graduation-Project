@@ -17,14 +17,12 @@ import com.specialty.administrator.beans.Address;
 import com.specialty.administrator.specialty.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class AddressActivity extends Activity implements View.OnClickListener {
-    private Button add_address;
-    private ImageView arrow;
-    private TextView save;
     private ListView listView;
     private AddressAdapter addressAdapter;
     private ArrayList<Address> addresses = new ArrayList<>();
@@ -43,11 +41,11 @@ public class AddressActivity extends Activity implements View.OnClickListener {
     }
 
     private void initView() {
-        add_address = findViewById(R.id.Add_address);
+        Button add_address = findViewById(R.id.Add_address);
         add_address.setOnClickListener(this);
-        arrow = findViewById(R.id.top_all_ImageView);
+        ImageView arrow = findViewById(R.id.top_all_ImageView);
         arrow.setOnClickListener(this);
-        save = findViewById(R.id.top_all_textView2);
+        TextView save = findViewById(R.id.top_all_textView2);
         save.setVisibility(View.INVISIBLE);
         listView = findViewById(R.id.address_list);
     }
@@ -67,7 +65,6 @@ public class AddressActivity extends Activity implements View.OnClickListener {
             case R.id.Add_address:
                 Intent address = new Intent(AddressActivity.this, AddAddress.class);
                 startActivity(address);
-                finish();
                 break;
             case R.id.top_all_ImageView:
                 finish();
@@ -79,17 +76,18 @@ public class AddressActivity extends Activity implements View.OnClickListener {
                         int type = addresses.get(i).getId();
                         if (position.equals(type + "")) {
                             addresses.get(i).setTag(1);
+                            Collections.swap(addresses, 0, i);
                         }
                     }
                     addressAdapter.notifyDataSetChanged();
                 }
                 break;
             case R.id.address_edit:
-                Intent editAddess = new Intent(AddressActivity.this,AddAddress.class);
-                startActivity(editAddess);
+                Intent editAddress = new Intent(AddressActivity.this, AddAddress.class);
+                startActivity(editAddress);
                 break;
             case R.id.address_delete:
-                if (tag!=null){
+                if (tag != null) {
                     for (int i = 0; i < this.addresses.size(); i++) {
                         Address address1 = this.addresses.get(i);
                         if (position.equals((address1.getId() + ""))) {
@@ -98,6 +96,7 @@ public class AddressActivity extends Activity implements View.OnClickListener {
                     }
                     addressAdapter.notifyDataSetChanged();
                 }
+                break;
             default:
         }
     }
