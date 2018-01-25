@@ -124,6 +124,11 @@
     <string name="center_password">登录密码</string>
     <string name="center_newpassword">请输入新密码</string>
     <string name="center_confirm_password">确认新密码</string>
+    <string name="center_accont">请输入账号</string>
+    <string name="center_phone">请输入手机号 </string>
+    <string name="center_verification">请输入验证码</string>
+    <string name="getitnow">立即获取</string>
+    <string name="next">下一步</string>
     <!--登录界面-->
     <string name="log_account">请输入登录账号</string>
     <string name="log_pwd">请输入密码</string>
@@ -176,5 +181,7 @@
     <string name="title_activity_choose_taste">ChooseTasteActivity</string>
     <string name="title_activity_password">PasswordActivity</string>
     <string name="title_activity_forget">ForgetActivity</string>
+    <string name="title_activity_verify_phone">VerifyPhoneActivity</string>
+    <string name="title_activity_evaluationeadit">evaluationeadit</string>
 
 </resources>

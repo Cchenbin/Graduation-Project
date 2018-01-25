@@ -42,6 +42,10 @@ public class login extends Activity implements View.OnClickListener {
                     Intent log = new Intent(login.this,MainActivity.class);
                     startActivity(log);
                 }
+                break;
+            case R.id.log_forget:
+                Intent forget = new Intent(login.this,ForgetActivity.class);
+                startActivity(forget);
             default:
         }
     }

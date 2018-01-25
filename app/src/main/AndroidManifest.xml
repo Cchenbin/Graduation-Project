@@ -97,6 +97,14 @@
             android:name=".ForgetActivity"
             android:label="@string/title_activity_forget">
         </activity>
+        <activity
+            android:name=".VerifyPhoneActivity"
+            android:label="@string/title_activity_verify_phone">
+        </activity>
+        <activity
+            android:name="com.specialty.administrator.me.evaluationeadit"
+            android:label="@string/title_activity_evaluationeadit">
+        </activity>
     </application>
 
 </manifest>

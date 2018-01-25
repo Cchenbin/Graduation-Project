@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorLine"
     tools:context="com.specialty.administrator.specialty.ForgetActivity">
 
     <include
@@ -11,47 +12,87 @@
         layout="@layout/top_all"/>
 
     <LinearLayout
-        android:layout_below="@id/forget_top"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
+        android:layout_below="@id/forget_top"
         android:layout_marginTop="40dp"
         android:orientation="vertical"
         android:padding="10dp">
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/password"
-            android:drawablePadding="11dp"
-            android:drawableStart="@mipmap/account"
-            android:hint="@string/center_newpassword"
-            android:padding="5dp"
-            android:textColorHint="@color/colorLogisicsText"/>
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/editText2"
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/password"
+                android:drawablePadding="11dp"
+                android:drawableStart="@mipmap/account"
+                android:hint="@string/center_accont"
+                android:padding="5dp"
+                android:textColorHint="@color/colorLogisicsText"/>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/password"
-            android:drawablePadding="11dp"
-            android:drawableStart="@mipmap/phone"
-            android:hint="@string/center_confirm_password"
-            android:padding="5dp"
-            android:textColorHint="@color/colorLogisicsText"/>
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/password"
+                android:drawablePadding="11dp"
+                android:drawableStart="@mipmap/phone"
+                android:hint="@string/center_phone"
+                android:padding="5dp"
+                android:textColorHint="@color/colorLogisicsText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/password"
+                android:drawablePadding="11dp"
+                android:drawableStart="@mipmap/verification"
+                android:hint="@string/center_verification"
+                android:padding="5dp"
+                android:textColorHint="@color/colorLogisicsText"/>
+
+            <TextView
+                android:id="@+id/verification"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/password"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/getitnow"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/next"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/button_back"
-                android:text="@string/order_confirm"
+                android:text="@string/next"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/text_size_x"/>
         </LinearLayout>

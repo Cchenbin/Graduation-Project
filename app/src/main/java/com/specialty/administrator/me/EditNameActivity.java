@@ -8,18 +8,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.specialty.administrator.specialty.R;
 
 public class EditNameActivity extends Activity implements View.OnClickListener {
     private EditText edittext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_name);
         initView();
     }
-    private void initView(){
+
+    private void initView() {
         ImageView arrow = findViewById(R.id.top_all_ImageView);
         arrow.setOnClickListener(this);
         TextView tv1 = findViewById(R.id.top_all_textView1);
@@ -33,16 +36,21 @@ public class EditNameActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.top_all_ImageView:
                 finish();
                 break;
             case R.id.edit_submit:
                 String name = edittext.getText().toString();
-                Intent intent = new Intent();
+                if (name.trim().equals("")) {
+                    Toast.makeText(EditNameActivity.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent();
                     intent.putExtra("name", name);
-                setResult(2, intent);
-                finish();
+                    setResult(2, intent);
+                    finish();
+                }
+                break;
             default:
         }
     }

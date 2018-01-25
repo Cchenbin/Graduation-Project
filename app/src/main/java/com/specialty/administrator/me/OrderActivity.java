@@ -141,7 +141,14 @@ public class OrderActivity extends Activity implements View.OnClickListener {
                             }
                         }
                     } else {
-                        Toast.makeText(this, "去评价", Toast.LENGTH_SHORT).show();
+                        for (int i = 0;i<this.orders.size();i++){
+                            Order order = this.orders.get(i);
+                            if(position.equals((order.getId()+""))){
+                                Intent evaluation = new Intent(OrderActivity.this, evaluationeadit.class);
+                                startActivity(evaluation);
+
+                            }
+                        }
                     }
                 }
                 order_list_adapter.notifyDataSetChanged();
